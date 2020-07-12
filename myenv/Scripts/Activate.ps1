@@ -27,7 +27,7 @@ function global:deactivate ([switch]$NonDestructive) {
 
 deactivate -nondestructive
 
-$env:VIRTUAL_ENV="C:\Users\Shadan Zahid\Desktop\django-lms-master\django-lms-master\myenv"
+$env:VIRTUAL_ENV="C:\Users\Shadan Zahid\Desktop\Github\LMS\MyEnv"
 
 if (! $env:VIRTUAL_ENV_DISABLE_PROMPT) {
     # Set the prompt to include the env name
@@ -35,7 +35,7 @@ if (! $env:VIRTUAL_ENV_DISABLE_PROMPT) {
     function global:_OLD_VIRTUAL_PROMPT {""}
     copy-item function:prompt function:_OLD_VIRTUAL_PROMPT
     function global:prompt {
-        Write-Host -NoNewline -ForegroundColor Green '(myenv) '
+        Write-Host -NoNewline -ForegroundColor Green '(MyEnv) '
         _OLD_VIRTUAL_PROMPT
     }
 }

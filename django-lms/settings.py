@@ -13,7 +13,7 @@ SECRET_KEY = '7+p@dyhsi=4u=mpv9*$r))!=ou217#y*!k++b7r8e(n6)+$1k8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -85,7 +85,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'EET'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = False
 
@@ -117,9 +117,10 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend'
 )
 
-EMAIL_HOST_USER = os.environ.get('DB_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('DB_PASS')
-EMAIL_HOST_PASSWORD = 'django-lms15'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+
+EMAIL_HOST_USER = 'shadan.zahid321@gmail.com'
+EMAIL_HOST_PASSWORD = 'dkshvmbdxyjrgyxq'

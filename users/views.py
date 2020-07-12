@@ -57,7 +57,10 @@ def signup(request):
                 profile = UserProfile(user=user, activation_key=activation_key,
                     key_expires=key_expires)
                 profile.save()
-                send_email(user, profile)
+                try:
+                    send_email(user, profile)
+                except:
+                    print("Email Not Sent ")
                 messages.info(request, 'Check email for a confirmation link!')
                 return redirect('/')          
         return render(request, 'signup.html', {'form': form})

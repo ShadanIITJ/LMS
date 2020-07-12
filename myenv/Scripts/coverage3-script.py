@@ -1,4 +1,4 @@
-#!"c:\users\shadan zahid\desktop\django-lms-master\django-lms-master\myenv\scripts\python.exe"
+#!"c:\users\shadan zahid\desktop\github\lms\myenv\scripts\python.exe"
 # EASY-INSTALL-ENTRY-SCRIPT: 'coverage==4.0.3','console_scripts','coverage3'
 __requires__ = 'coverage==4.0.3'
 import re
